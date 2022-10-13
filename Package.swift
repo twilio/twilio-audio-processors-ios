@@ -1,23 +1,28 @@
-// swift-tools-version:5.3
+// swift-tools-version: 5.7
+// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "TwilioAudioProcessors",
-    platforms: [
-        .iOS("12.2")
-    ],
     products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "TwilioAudioProcessors",
             targets: ["TwilioAudioProcessors"]),
     ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        // .package(url: /* package url */, from: "1.0.0"),
+    ],
     targets: [
-        .binaryTarget(
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .target(
             name: "TwilioAudioProcessors",
-            url: "https://github.com/twilio/twilio-audio-processors-ios/releases/download/5.3.0/TwilioAudioProcessors.xcframework.zip",
-            checksum: "ea0ee295197162fa6ff5b67912532dd9fc8e96144be22085b2fd2b32d283c795
-"
-        ),
+            dependencies: []),
+        .testTarget(
+            name: "TwilioAudioProcessorsTests",
+            dependencies: ["TwilioAudioProcessors"]),
     ]
 )
