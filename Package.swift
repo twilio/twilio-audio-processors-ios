@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TwilioAudioProcessors",
-            url: "https://github.com/twilio/twilio-audio-processors-ios/releases/download/5.9.0/TwilioAudioProcessors.xcframework.zip",
-            checksum: "d0a9082ffeaf5c4b32c299dc08387d399ad6b1e5c594980222b0bf15828abb16"
+            url: "https://github.com/twilio/twilio-audio-processors-ios/releases/download/0.0.99/TwilioAudioProcessors.xcframework.zip",
+            checksum: "0a9489d595603c69facb206b6738cf43a06e1fbf51ea2994faa13d825e290797"
         ),
     ]
 )
